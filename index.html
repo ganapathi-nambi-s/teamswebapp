@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Account Statement</title>
+<title>Account Statement Generator</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
 
   :root {
-    --bg: #0a0c10;
-    --surface: #12151c;
-    --surface2: #1a1f2b;
-    --border: #252b38;
-    --border-bright: #2e3848;
+    --bg: #0d3320;
+    --surface: #0f3d25;
+    --surface2: #144d2e;
+    --border: rgba(255,255,255,0.15);
+    --border-bright: rgba(255,255,255,0.3);
     --accent: #00d4ff;
     --accent2: #7c3aed;
     --accent-glow: rgba(0,212,255,0.15);
     --success: #00e5a0;
     --warning: #ffb547;
     --error: #ff4d6d;
-    --text: #e2e8f0;
-    --text-muted: #64748b;
-    --text-dim: #94a3b8;
+    --text: #f0faf4;
+    --text-muted: rgba(255,255,255,0.45);
+    --text-dim: rgba(255,255,255,0.65);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -39,10 +39,10 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.4;
+    opacity: 1;
     pointer-events: none;
     z-index: 0;
   }
@@ -54,7 +54,7 @@
     left: -20%;
     width: 80%;
     height: 80%;
-    background: radial-gradient(ellipse, rgba(0,212,255,0.06) 0%, transparent 65%);
+    background: radial-gradient(ellipse, rgba(0,255,120,0.08) 0%, transparent 65%);
     pointer-events: none;
     z-index: 0;
   }
@@ -175,7 +175,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border-bright), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
   }
 
   .card-label {
@@ -571,7 +571,7 @@
   <header>
     <div class="logo-area">
       <h1>Statement<span>Gen</span></h1>
-      <p>Account Statement · Azure-Backed-TeamsApp</p>
+      <p>Account Statement Generator · Azure-Backed</p>
     </div>
     <div class="status-badge">
       <div class="status-dot"></div>
